@@ -19,10 +19,15 @@ from scapy.layers.dot11 import RadioTap, Dot11, Dot11Elt,\
 Dot11EltRSN, Dot11EltMicrosoftWPA, Dot11Auth, Dot11Deauth,\
 Dot11AssoResp, Dot11Disas
 from scapy.layers.eap import EAPOL, EAP
-from scapy.arch.linux import L2ListenSocket
+fom scapy.arch.linux import L2ListenSocket
 from scapy.sendrecv import sendp
 
-from pyroute2 import IW
+
+from pyroute2 import iwutil
+with iwutil.IW() as IW:
+    ...
+
+
 from pyroute2.netlink.exceptions import NetlinkError
 
 from src.utils import common
