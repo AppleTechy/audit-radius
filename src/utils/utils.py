@@ -3,10 +3,17 @@
 Contains helper functions.
 """
 
-from pyroute2 import IW, IPRoute, RawIPRoute, IPDB
-from pyroute2.netlink.exceptions import NetlinkError
+from pyroute2 import iwutil
+with iwutil.IW() as IW:
+    ...
 
-from src.utils.log import g_exception_logger
+from pyroute2 import IPRoute,IPDB
+from pyroute2.netlink.exceptions import NetlinkError
+#from pyroute2 import iproute
+#with iproute.RAWIPRoute as RawIPRoute:
+    ...
+
+#from src.utils.log import g_exception_logger
 
 
 SIOCGIFFLAGS = 0x8913
