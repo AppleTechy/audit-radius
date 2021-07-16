@@ -15,9 +15,7 @@ import struct
 from abc import ABCMeta, abstractmethod
 
 from scapy.layers.l2 import Ether
-from scapy.layers.dot11 import RadioTap, Dot11, Dot11Elt,\
-Dot11EltRSN, Dot11EltMicrosoftWPA, Dot11Auth, Dot11Deauth,\
-Dot11AssoResp, Dot11Disas
+from scapy.layers.dot11 import RadioTap, Dot11, Dot11Elt, Dot11EltRSN, Dot11EltMicrosoftWPA, Dot11Auth, Dot11Deauth, Dot11AssoResp, Dot11Disas
 from scapy.layers.eap import EAPOL, EAP
 fom scapy.arch.linux import L2ListenSocket
 from scapy.sendrecv import sendp
